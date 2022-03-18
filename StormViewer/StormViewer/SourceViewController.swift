@@ -26,6 +26,15 @@ class SourceViewController: NSViewController {
             }
         }
     }
+    
+    func selectRowAt(_ index: Int) {
+        guard let splitVC = parent as? NSSplitViewController else {
+            return
+        }
+        if let detail = splitVC.children[1] as? DetailViewController {
+            detail.imageSelected(name: pictures[0])
+        }
+    }
 }
 
 extension SourceViewController: NSTableViewDelegate, NSTableViewDataSource {
@@ -46,11 +55,6 @@ extension SourceViewController: NSTableViewDelegate, NSTableViewDataSource {
         guard tableView.selectedRow != -1 else {
             return
         }
-        guard let splitVC = parent as? NSSplitViewController else {
-            return
-        }
-        if let detail = splitVC.children[1] as? DetailViewController {
-            detail.imageSelected(name: pictures[tableView.selectedRow])
-        }
+        selectRowAt(tableView.selectedRow)
     }
 }

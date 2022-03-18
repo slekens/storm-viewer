@@ -23,6 +23,7 @@
 		2ED78E0E27E2565C004329D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED78E0C27E2565C004329D5 /* Main.storyboard */; };
 		2ED78E1627E265DF004329D5 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED78E1527E265DF004329D5 /* SourceViewController.swift */; };
 		2ED78E1827E26745004329D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED78E1727E26745004329D5 /* DetailViewController.swift */; };
+		2EEC977727E50FBB00A75AAD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC977627E50FBB00A75AAD /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2ED78E0F27E2565C004329D5 /* StormViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StormViewer.entitlements; sourceTree = "<group>"; };
 		2ED78E1527E265DF004329D5 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		2ED78E1727E26745004329D5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2EEC977627E50FBB00A75AAD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				2ED78E0827E2565B004329D5 /* ViewController.swift */,
 				2ED78E1527E265DF004329D5 /* SourceViewController.swift */,
 				2ED78E1727E26745004329D5 /* DetailViewController.swift */,
+				2EEC977627E50FBB00A75AAD /* WindowController.swift */,
 				2ED78E0A27E2565C004329D5 /* Assets.xcassets */,
 				2ED78E0C27E2565C004329D5 /* Main.storyboard */,
 				2ED78E0F27E2565C004329D5 /* StormViewer.entitlements */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED78E0927E2565B004329D5 /* ViewController.swift in Sources */,
+				2EEC977727E50FBB00A75AAD /* WindowController.swift in Sources */,
 				2ED78E0727E2565B004329D5 /* AppDelegate.swift in Sources */,
 				2ED78E1627E265DF004329D5 /* SourceViewController.swift in Sources */,
 				2ED78E1827E26745004329D5 /* DetailViewController.swift in Sources */,

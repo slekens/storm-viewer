@@ -139,29 +139,70 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Storm Viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="17830B61-BAB3-46AE-AEFB-33121F889964" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="VD7-Zb-XMZ">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="q2N-SN-HBv"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="XVi-S5-XyK"/>
+                                <toolbarItem implicitItemIdentifier="DE07C28C-FFFE-4BBA-8CCE-436F31B32E09" label="" paletteLabel="" image="square.and.arrow.up" catalog="system" bordered="YES" sizingBehavior="auto" id="KEz-MG-Nfd">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="4JC-Lb-pUC">
+                                        <rect key="frame" x="0.0" y="14" width="28" height="23"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="square.and.arrow.up" catalog="system" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j4N-ja-Yez">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="shareClicked:" target="Oky-zY-oP4" id="0vI-1f-Nx5"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="793D20D9-E563-4C46-949E-4267FD05A131" label="" paletteLabel="" image="info.circle" catalog="system" sizingBehavior="auto" id="iMX-2H-2Zg">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="Nxz-hv-LkV">
+                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="info.circle" catalog="system" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wpL-Ub-uXD">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showAboutInfo:" target="Oky-zY-oP4" id="i4K-IF-HIK"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="q2N-SN-HBv"/>
+                                <toolbarItem reference="XVi-S5-XyK"/>
+                                <toolbarItem reference="iMX-2H-2Zg"/>
+                                <toolbarItem reference="KEz-MG-Nfd"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="shareButton" destination="4JC-Lb-pUC" id="dAs-pv-Sls"/>
                         <segue destination="5Rv-9a-abA" kind="relationship" relationship="window.shadowedContentViewController" id="cjS-Tg-5ZP"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="276"/>
+            <point key="canvasLocation" x="62" y="274"/>
         </scene>
-        <!--Split View Controller-->
+        <!--View Controller-->
         <scene sceneID="bxO-bC-xYN">
             <objects>
-                <splitViewController id="5Rv-9a-abA" sceneMemberID="viewController">
+                <splitViewController id="5Rv-9a-abA" customClass="ViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="260" id="WZ7-ia-9tE"/>
                         <splitViewItem id="KyH-kq-1Ee"/>
@@ -218,16 +259,16 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="8Yb-vZ-hB3">
-                                                            <rect key="frame" x="18" y="0.0" width="211" height="40"/>
+                                                            <rect key="frame" x="18" y="0.0" width="212" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qpz-2P-7iA">
-                                                                    <rect key="frame" x="3" y="4" width="30" height="32"/>
+                                                                    <rect key="frame" x="3" y="4" width="31" height="32"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSActionTemplate" catalog="system" id="PDo-i6-3qC"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSActionTemplate" id="PDo-i6-3qC"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-jb-QQs">
-                                                                    <rect key="frame" x="48" y="8" width="162" height="24"/>
+                                                                    <rect key="frame" x="48" y="8" width="163" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="ZnY-XU-2hl">
                                                                         <font key="font" metaFont="system" size="20"/>
@@ -306,6 +347,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" catalog="system" width="15" height="15"/>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="info.circle" catalog="system" width="15" height="15"/>
+        <image name="square.and.arrow.up" catalog="system" width="16" height="17"/>
     </resources>
 </document>
